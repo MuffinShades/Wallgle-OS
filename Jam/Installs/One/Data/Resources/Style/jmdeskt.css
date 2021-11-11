@@ -1,0 +1,229 @@
+body {
+    background-color: #fff;
+    overflow: hidden;
+    /*transform: rotate(180deg);*/
+}
+.app {
+    width: 73px;
+    height: 82px;
+    border: 1px solid rgba(0,0,0,0);
+    user-select: none;
+    overflow:visible;
+    transition: background ease-in-out 0.05s;
+    position: absolute;
+}
+.app:hover, .name:hover .app, .img:hover .app {
+    background-color: rgba(132, 184, 211, 0.5);
+    border: 1px solid rgba(38, 160, 218, 0.5);
+}
+.name {
+    font-size: 12px;
+    position: absolute;
+    top: 53px;
+    width: 70px;
+    color: #fff;
+    text-shadow: 0px 0px 3px #000, 0px 0px 3px #000, 0px 0px 3px #000;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 10;
+}
+.img {
+    height: 50px;
+    width: auto;
+    position: relative;
+    top: 2px;
+    margin: none;
+}
+.window {
+    border: 1px solid #000;
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    user-select: none;
+    width: 500px;
+    height: 532px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    backdrop-filter: blur(1.5px);
+    background-color: rgba(154, 198, 255, 0);
+    border-radius: 3px;
+    box-shadow: 0px 0px 0px 1px #fff, inset 0px 0px 0px 1px #fff;
+    background-image: linear-gradient(to top,rgba(0,0,0,0.3), rgba(0,0,0,0) 69%,rgba(255,255,255,0.7) 70% 71%, rgba(0,0,0,0.1));
+}
+.window:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    background-color: #4580c4;
+    filter: brightness(1.4);
+    opacity: 0.35;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+/*Taskbar*/
+.taskbar-container {
+    width: 100%;
+    height: 42px;
+    position: fixed;
+    bottom: 0px;
+    /*background-color: #fff;*/
+    z-index: 2000000;
+    left: 0px;
+    border: 1px solid #000;
+    backdrop-filter: blur(4px), opacity(0.5);
+    /*box-shadow: 0px 0px 0px 1px #fff, inset 0px 0px 0px 1px #fff;*/
+    /*background-image: linear-gradient(to right, rgba(0,0,0,0.35) 0% 20%, rgba(0,0,0,0), rgba(0,0,0,0.35) 80%);*/
+    background-color: rgba(167, 192, 220, 0.5);
+}
+.taskbar-container::before {
+    content: '';
+    width: 100%;
+    height: 42px;
+    position: fixed;
+    bottom: 0px;
+    /*background-color: #fff;*/
+    z-index: 2000001;
+    left: 0px;
+    border: 1px solid #000;
+    /*background-image: linear-gradient(to right, rgba(0,0,0,0.25) 0% 3%, rgba(0,0,0,0), rgba(0,0,0,0.25) 97%);*/
+}
+.start-btn-container {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.btn-start {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+}
+.bv {
+    width: 54px;
+    height: 42px;
+    background: none;
+    border: 1px solid #000;
+    border-radius: 3px;
+    position: absolute;
+    top: -1px;
+    left: 42px;
+    /*background-image: linear-gradient(to top left, rgba(174, 197, 223, 0.5), rgba(230, 237, 245, 0.5));*/
+    z-index: 2000030;
+    box-shadow: inset 0px 0px 0px 1px rgba(196, 209, 222, 0.5);
+    /*border: 1px solid rgba(101, 117, 134, 0.5);
+    backdrop-filter: brightness(1.4);*/
+}
+.ac-bv {
+    width: 54px;
+    height: 42px;
+    background: none;
+    border: 1px solid #000;
+    border-radius: 3px;
+    position: absolute;
+    top: -1px;
+    /*background-image: linear-gradient(to top left, #d5e1ee, #f1f5fa);*/
+    z-index: 2000030;
+    /*box-shadow: inset 0px 0px 0px 1px #c4d1de;
+    border: 1px solid #657586;*/
+    backdrop-filter: brightness(1.4);
+}
+
+/*context menu*/
+
+#ctx-menu{
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    position: absolute;
+    /*display: none;*/
+    padding: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #ccc;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 1000000000000000000000000000000;
+    box-shadow: 5px 5px 2px 0px #000;
+}
+
+.men-btns button div {
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    /*display: none;*/
+    padding: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #ccc;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 1000000000000000000000000000000;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.men-btns button, .slide button {
+    width: 200px;
+    height: 23px;
+    background: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    text-align: left;
+    font-size: 12px;
+    padding: 1px 6px;
+    align-items: flex-start;
+}
+.men-btns button:hover, .slide button:hover, .slide-con:hover {
+    background:rgb(207, 236, 251);
+}
+
+.slide-con {
+    width: calc(200px - 12px);
+    height: 23px;
+    background: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    text-align: left;
+    font-size: 12px;
+    padding: 1px 6px;
+    align-items: flex-start;
+}
+
+.extra-ctx {
+    display: none;
+}
+.side {
+    width: 210px;
+    height: auto;
+    background-color: #fff;
+    position: relative;
+    left: 193px;
+    top: -23px;
+    /*display: none;*/
+    padding: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #ccc;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+    box-shadow: 2px 2px 2px #000;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.slide-con:hover div {
+    display: block;
+    opacity: 1;
+}
+
+.slide-con div:hover {
+    display: block;
+    opacity: 1;
+}

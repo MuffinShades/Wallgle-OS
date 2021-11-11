@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel='icon' href='../../../_osApp/Jam.ico'>
+        <link rel='stylesheet' href='../Data/Resources/Style/jmdeskt.css'>
+        <link rel='stylesheet' href='../Data/Resources/Style/winstyle.css'>
+        <style>
+            body {
+                background-size: cover;
+                background-image: url('Personalize/Backgrounds/snfl.png');
+            }
+        </style>
+    </head>
+    <body>
+        <div id='ctx-menu' onmouseenter='ctxHov=true' onmouseleave='ctxHov = false'>
+            <div class='btn-wrap'>
+                <div class='men-btns'>
+                    <div class='extra-ctx' id='type_app'> 
+                        <button onclick='openCurApp()'><b>Open</b></button>
+                    </div>
+                    <div class='slide-con'>New+
+                        <div class='side'>
+                            <button>Text Document</button>
+                            <button>Folder</button>
+                            <button>File</button>
+                            <button>Javascript File</button>
+                            <button>Cat</button>
+                        </div>
+                    </div>
+                    <button onclick='flipOut()'>Flip Out</button>
+                    <div class='extra-ctx' id='type_app'>
+                        <button>Delete</button>
+                        <div class='slide-con'>Open With >
+                            <div class='side'>
+                                <button>Choose a app</button>
+                            </div>
+                        </div>
+                        <button>Edit</button>
+                        <button>Rename</button>
+                        <button>Properties</button>
+                    </div>
+                    <button>Personalize</button>
+                </div>
+            </div>
+        </div>
+        <div id='desktop'>
+            <div id='app-box'>
+                <!--<div id='app_0' class='app' onmousedown='dragStart(0)' style='top: 5px; left: 5px;'>
+                    <center>
+                        <img class='img' src='../Data/Resources/Images/bg.png' height='60'>
+                        <div class='name'>Im copying windows yay LOL</div>
+                    </center>
+                </div>
+                <div id='app_1' class='app' onmousedown='dragStart(1)' style='top: 5px; left: 5px;'>
+                    <center>
+                        <img class='img'>
+                        <div class='name'>UrMom.exe</div>
+                    </center>
+                </div>-->
+            </div>
+            <div id='ghost-con'></div>
+            <div id='win-con'></div>
+            <div id='mouse-'></div>
+        </div>
+        <div class='taskbar-container'>
+            <div class='taskbar'>
+                <div class='taskbar-wrap'>
+                    <div class='start-btn-container'>
+                        <div class='start-btn'>
+                            <button class='btn-start'></button>
+                        </div>
+                    </div>
+                    <div class='run-container'>
+                        <div id='run'>
+                            <!--*Running Apps are stored here.*-->
+                        </div>
+                    </div>
+                    <div class=''>
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div id='html-scripts'></div>
+        <script src='../Data/Drivers/mouse.js'></script>
+        <script src='../Data/Apps/helpers/jmMnFil.js'></script>
+        <script src='../Data/Desktop/jmdsk.js'></script>
+        <script src='../Data/Desktop/cntx.js'></script>
+        <script src='../Data/Desktop/window.js'></script>
+        <script src='../Data/Apps/helpers/APP_LOAD.js'></script>
+        <script src='../Data/Apps/helpers/drag.js'></script>
+    </body>
+</html>

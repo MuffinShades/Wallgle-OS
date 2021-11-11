@@ -1,0 +1,150 @@
+.left-bar {
+    /*background-color: #0f0;*/
+    width: 8px;
+    height: calc(100% - 8px);
+    position: absolute;
+    left: -4px;
+    top: 4px;
+    cursor: ew-resize;
+}
+.right-bar {
+    /*background-color: #f00;*/
+    width: 8px;
+    height: calc(100% - 8px);
+    position: absolute;
+    right: -4px;
+    top: 4px;
+    cursor: ew-resize;
+}
+.top-bar {
+    /*background-color: #ff0;*/
+    width: calc(100% - 8px);
+    height: 8px;
+    position: absolute;
+    left: 4px;
+    top: -4px;
+    cursor: ns-resize;
+}
+.bottom-bar {
+    /*background-color: #00f;*/
+    width: calc(100% - 8px);
+    height: 8px;
+    position: absolute;
+    left: 4px;
+    bottom: -4px;
+    cursor: ns-resize;
+}
+.right-top-bar {
+    /*background-color: #f0f;*/
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: -4px;
+    top: -4px;
+    cursor: nesw-resize;
+}
+.left-top-bar {
+    /*background-color: #0ff;*/
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    cursor: nwse-resize;
+}
+.right-bottom-bar {
+    /*background-color: #f80;*/
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    cursor: nwse-resize;
+}
+.left-bottom-bar {
+    /*background-color: #80f;*/
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: -4px;
+    bottom: -4px;
+    cursor: nesw-resize;
+}
+.left-bottom-bar, .right-bottom-bar, .left-top-bar, .right-top-bar, .bottom-bar, .top-bar, .right-bar, .left-bar {
+    z-index: 10000001;
+}
+#mouse- {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+.options {
+    /*background-color: #bbb;*/
+    backdrop-filter: blur(1.5px);
+    background-color: rgba(119, 178, 255, 0);
+    height: 32px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.close-btn {
+    height: 32px;
+    width: 48px;
+    border: none;
+    background-color: #f00;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+}
+.close-btn {
+    image-rendering: pixelated;
+    background: url('../../../Core/x-btn.png');
+    background-size: 41px 17px;
+    width: 41px;
+    height: 17px;
+    border: none;
+    color: rgba(0, 0, 0, 0);
+    position: absolute;
+    border: none;
+    top: -1px;
+    right: 5px;
+}
+
+.close-btn:hover {
+    background: url('../../../Core/x-btnhover.png');
+    background-size: 41px 17px;
+    width: 41px;
+    height: 17px;
+    border: none;
+    color: rgba(0, 0, 0, 0);
+}
+.cnt {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 32px);
+    overflow: scroll;
+}
+.title {
+    color: #000;
+    text-shadow: 0px 0px 3px #fff, 0px 0px 3px #fff, 0px 0px 3px #fff;
+    font-size: 13px;
+    height: 32px;
+    position: absolute;
+    top: -5px;
+    left: 37px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.icon {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 5px;
+    left: -37px;
+}
