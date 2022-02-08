@@ -6,6 +6,13 @@ var MAIN_FILES = [
         file: 'AppAdd.html',
         openHeight: 500,
         openWidth: 500,
+    },
+    {
+        name: 'Settings',
+        src: 'Main/01',
+        file: 'set.html',
+        openHeight: 500,
+        openWidth: 500,
     }
 ];
 
