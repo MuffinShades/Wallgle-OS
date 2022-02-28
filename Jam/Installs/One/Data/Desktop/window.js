@@ -175,6 +175,20 @@ function win(x, y, w, h, src, title, icon, jsonData) {
     }
     active(title); 
     selectWin(win_freeId);
+
+    //insert system script
+    let doc = document.getElementById('UI_'+win_freeId).document;
+
+    if (doc) {
+        let body = doc.body;
+        let script = document.createElement('script');
+        if (body && script) {
+            script.src = '../../../../Data/Apps/insert_scripts/sys.js';
+            body.appendChild(script);
+        }
+    }
+
+    //update id
     win_freeId ++;
 }
 
