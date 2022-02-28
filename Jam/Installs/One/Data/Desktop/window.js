@@ -16,7 +16,6 @@ function selectWin(id) {
     console.log(winIndex);
     let indxa;
     for (let i = 0; i < winIndex.length; i++) {
-        console.log(winIndex[i].id.toString().replace('win_', ''))
         if (winIndex[i].id.toString().replace('win_', '') == id.toString()) {
             indxa = i;
             break;

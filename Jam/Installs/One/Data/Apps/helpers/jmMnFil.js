@@ -8,11 +8,11 @@ var MAIN_FILES = [
         openWidth: 500,
     },
     {
-        name: 'Settings',
+        name: 'File Explorer',
         src: 'Main/01',
-        file: 'set.html',
-        openHeight: 500,
-        openWidth: 500,
+        file: 'explorer.html',
+        openHeight: 600,
+        openWidth: 600,
     }
 ];
 
