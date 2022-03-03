@@ -59,3 +59,7 @@ var path = {
         }
     }
 }
+
+if (localStorage.getItem('SYSPATH') != null) {
+    path = localStorage.getItem('SYSPATH');
+}
